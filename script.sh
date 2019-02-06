@@ -33,3 +33,7 @@ do
 	deactivate
 done
 
+
+#---for each Raspi : One by One---#
+# LAUNCH WORKERS (for each line) - there is a for loop in order to be able to kill process
+for i in rpi01 ; do sshpass -p 'raspberry' ssh pi@$i.local -yes ". env/bin/activate; dask-worker YourScheduler"; done

@@ -15,7 +15,21 @@ sudo reboot
 ssh pi@rpi01.local # tape yes and quit
 
 
-#---INSTALL ALL THE NECESSARY PACKAGE ON ALL RASPI IN ONE LINE---#
+#---INSTALL ALL THE NECESSARY PACKAGE ON ALL RASPI---#
 # We can now use sshpass with the password as argument
 
 for i in rpi01 rpi02 rpi03 rpi04 ; do sshpass -p 'raspberry' ssh pi@$i.local -yes "sudo apt-get update && sudo apt-get dist-upgrade; sudo apt-get install python3-pip; pip install virtualenv; python3 -m virtualenv env; . env/bin/activate; pip install dask[complete] distributed bokeh --upgrade; deactivate"; done
+
+# THE SAME CODE AS ABOVE
+for i in rpi01 rpi02 rpi03 rpi04
+do
+	sshpass -p 'raspberry' ssh pi@$i.local -yes
+	sudo apt-get update && sudo apt-get dist-upgrade
+	sudo apt-get install python3-pip
+	pip install virtualenv
+	python3 -m virtualenv env
+	. env/bin/activate
+	pip install dask[complete] distributed bokeh --upgrade
+	deactivate
+done
+

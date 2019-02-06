@@ -11,3 +11,11 @@ sudo nano /etc/hosts # replace raspberrypi by the name (ie: rpi01), ctrl+x and r
 sudo nano /etc/hostname # same as above
 sudo reboot
 
+# re-allow connection with the hostname
+ssh pi@rpi01.local # tape yes and quit
+
+
+#---INSTALL ALL THE NECESSARY PACKAGE ON ALL RASPI IN ONE LINE---#
+# We can now use sshpass with the password as argument
+
+for i in rpi01 rpi02 rpi03 rpi04 ; do sshpass -p 'raspberry' ssh pi@$i.local -yes "sudo apt-get update && sudo apt-get dist-upgrade; sudo apt-get install python3-pip; pip install virtualenv; python3 -m virtualenv env; . env/bin/activate; pip install dask[complete] distributed bokeh --upgrade; deactivate"; done

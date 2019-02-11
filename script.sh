@@ -29,7 +29,9 @@ do
 	pip3 install virtualenv
 	python3 -m virtualenv env
 	. env/bin/activate
+	sudo apt-get install libatlas-base-dev
 	pip install dask[complete] distributed bokeh --upgrade
+	pip install s3fs
 	deactivate
 done
 

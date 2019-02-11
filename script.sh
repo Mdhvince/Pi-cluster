@@ -12,7 +12,7 @@ sudo nano /etc/hostname # same as above
 sudo reboot
 
 # re-allow connection with the hostname
-ssh pi@rpi01.local # tape yes and quit
+ssh pi@rpi-worker01.local # tape yes and quit
 
 
 #---INSTALL ALL THE NECESSARY PACKAGE ON ALL RASPI---#

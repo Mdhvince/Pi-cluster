@@ -33,6 +33,8 @@ do
 	deactivate
 done
 
+# You can also type command without for loop and just synchronize terminal panes when entering the commande.
+
 
 #---for each Raspi : One by One---#
 # LAUNCH WORKERS (for each line) - there is a for loop in order to be able to kill process

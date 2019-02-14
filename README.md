@@ -1,7 +1,9 @@
-# Pi-cluster
+# Pi-cluster (un-managed cluster)
+
+<img src="picluster.JPG">
 
 ## Motivation
-I decided to create my own 'cluster' (I would say Infra for distributed computing) of raspberry Pi in order to handle huge dataset using Dask. Dask is a poweful librairy built on top of Pandas, we can do complexe operation on dataframe by keeping the same syntax as Pandas in a distrubuted way, so faster. You can learn more about dask by reading the awesome and complete <a href="http://docs.dask.org/en/latest/">documentation</a>.
+I decided to create my own 'cluster' of raspberry Pi in order to handle huge dataset using Dask. Dask is a poweful librairy built on top of Pandas, we can do complexe operation on dataframe by keeping the same syntax as Pandas in a distrubuted way, so faster. You can learn more about dask by reading the awesome and complete <a href="http://docs.dask.org/en/latest/">documentation</a>.
 
 ## All you need
 - Some Raspberry Pi
